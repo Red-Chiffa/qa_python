@@ -69,17 +69,17 @@ def test_get_books_for_children_book_and_genre_not_in_genre_age_rating_not_to_sh
 def test_add_book_in_favorites_book_in_books_genre_book_added(books_collector_obj, set_books_genre_for_test):
     name = 'Шерлок Холмс'
     books_collector_obj.add_book_in_favorites(name)
-    assert name in books_collector_obj.favorites
+    assert name in books_collector_obj.get_list_of_favorites_books()
 
 
-def test_delete_book_from_favorites_not_empty_favorites_book_deleted(books_collector_obj, set_books_genre_for_test,
+def test_delete_book_from_favorites_not_empty_favorites_book_deleted(books_collector_obj,
                                                                      add_books_in_favorites_for_tests):
     name = 'Слон и Моська'
     books_collector_obj.delete_book_from_favorites(name)
-    assert name not in books_collector_obj.favorites
+    assert name not in books_collector_obj.get_list_of_favorites_books()
 
 
-def test_get_list_of_favorites_books_not_empty_favorites_show_books(books_collector_obj, set_books_genre_for_test,
+def test_get_list_of_favorites_books_not_empty_favorites_show_books(books_collector_obj,
                                                                     add_books_in_favorites_for_tests):
     favorites_books = ['Слон и Моська', 'Бриллиантовая рука']
     assert books_collector_obj.get_list_of_favorites_books() == favorites_books
