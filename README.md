@@ -1,1 +1,13 @@
 # qa_python
+добавлены тесты для проверки:
+1. добавления книг с названиями разного размера test_add_new_book_check_book_size
+2. добравленная книга не имеет жанра test_add_new_book_added_book_has_no_genre
+3. установки жанра добавленной книге test_set_book_genre_added_book_set_genre
+4. получения жанра по названию книги test_get_book_genre
+5. получения списка книг по жанру, книга и жанр есть в books_genre test_get_books_with_specific_genre_book_and_genre_in_genre_show_books
+6. получение словаря непустого books_genre test_get_books_genre_not_empty_books_genre
+7. получение списка книг для детей, книга и жанр есть в books_genre test_get_books_for_children_book_and_genre_in_genre_age_rating_show_books
+8. в списке книг для детей нет неподходящих книг test_get_books_for_children_book_and_genre_not_in_genre_age_rating_not_to_show_books
+9. добавление книги в спискок favorites, книга и жанр есть в books_genre test_add_book_in_favorites_book_in_books_genre_book_added
+10. удаление книги из непустого списка favorites test_delete_book_from_favorites_not_empty_favorites_book_deleted
+11. получение непустого списка favorites test_get_list_of_favorites_books_not_empty_favorites_show_books
