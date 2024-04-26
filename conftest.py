@@ -5,8 +5,8 @@ from main import BooksCollector
 
 @pytest.fixture(scope='function')
 def books_collector_obj():
-    books_collector_obj = BooksCollector()
-    return books_collector_obj
+    books_collector_new_object = BooksCollector()
+    return books_collector_new_object
 
 
 @pytest.fixture

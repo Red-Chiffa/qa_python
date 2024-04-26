@@ -19,7 +19,7 @@ def test_add_new_book_check_book_size(books_collector_obj, name, expected_result
 def test_add_new_book_added_book_has_no_genre(books_collector_obj):
     name = 'Слон и Моська'
     books_collector_obj.add_new_book(name)
-    assert books_collector_obj.books_genre[name] == ''
+    assert books_collector_obj.get_book_genre(name) == ''
 
 
 def test_set_book_genre_added_book_set_genre(books_collector_obj):
@@ -27,7 +27,7 @@ def test_set_book_genre_added_book_set_genre(books_collector_obj):
     genre = 'Мультфильмы'
     books_collector_obj.add_new_book(name)
     books_collector_obj.set_book_genre(name, genre)
-    assert books_collector_obj.books_genre[name] == genre
+    assert books_collector_obj.get_book_genre(name) == genre
 
 
 def test_get_book_genre(books_collector_obj):
